@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    window.onload = function () {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      var iosLink = "https://apps.apple.com/us/app/cleanup-ai-photo-cleaner/id6760357173";
+      var androidLink = "https://play.google.com/store/apps/details?id=com.freespace.cleanup";
+
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.replace(iosLink);
+      } else if (/android/i.test(userAgent)) {
+        window.location.replace(androidLink);
+      } else {
+        window.location.replace(androidLink);
+      }
+    };
+  </script>
+</head>
+
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
